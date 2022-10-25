@@ -18,8 +18,6 @@ import javax.swing.border.EmptyBorder;
 
 public class Login extends JFrame{
     private JPanel contentPane;
-    private JTextField firstname;
-    private JTextField lastname;
     private JTextField username_mobile;
     private JPasswordField passwordField;
     private JButton loginButton;
