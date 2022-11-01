@@ -16,60 +16,56 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class Login extends JFrame{
-    private JPanel contentPane;
-    private JTextField username_mobile;
-    private JPasswordField passwordField;
-    private JButton loginButton;
+import java.util.concurrent.TimeUnit;
 
-    public static void main(String[] args){
-        try {
-            Login frame = new Login();
+
+public class Login{
+        public static void main(String[] args) {
+            JFrame frame = new JFrame("Login");
+            frame.setIconImage(Toolkit.getDefaultToolkit().getImage("bank_icon.png"));
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(550, 870);
             frame.setVisible(true);
-        } catch (Exception exc) {
-            exc.printStackTrace();
-        }
-    };
+            frame.setResizable(false);
 
-    public Login(){
-        setIconImage(Toolkit.getDefaultToolkit().getImage("bank_icon.png"));
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(450, 190, 550, 870);
-        setResizable(false);
-        contentPane = new JPanel();
-        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        setContentPane(contentPane);
-        contentPane.setLayout(null);
+            JPanel contentPane = new JPanel();
+            contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+            frame.setContentPane(contentPane);
+            contentPane.setLayout(null);
 
-        JLabel lblUserLogin = new JLabel("Welcome to TinkOn bank");
-        lblUserLogin.setFont(new Font("Times New Roman", Font.PLAIN, 42));
-        lblUserLogin.setBounds(45, 52, 460, 50);
-        contentPane.add(lblUserLogin);
+            JLabel lblNewUserRegister = new JLabel("Welcome to TinkOn bank");
+            lblNewUserRegister.setFont(new Font("Times New Roman", Font.PLAIN, 42));
+            lblNewUserRegister.setBounds(45, 52, 460, 50);
+            contentPane.add(lblNewUserRegister);
 
-        JLabel lblEmailAddress = new JLabel("Username or Mobile");
-        lblEmailAddress.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblEmailAddress.setBounds(58, 250, 250, 36);
-        contentPane.add(lblEmailAddress);
+            JLabel lblEmailAddressUsername = new JLabel("<html>Email address<br/>or username</html>");
+            lblEmailAddressUsername.setVisible(true);
+            lblEmailAddressUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
+            lblEmailAddressUsername.setBounds(58, 315, 300, 60);
+            contentPane.add(lblEmailAddressUsername);
 
-        username_mobile = new JTextField();
-        username_mobile.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        username_mobile.setBounds(260, 245, 228, 50);
-        contentPane.add(username_mobile);
+            JTextField email_username = new JTextField();
+            email_username.setVisible(true);
+            email_username.setFont(new Font("Tahoma", Font.PLAIN, 32));
+            email_username.setBounds(214, 320, 228, 50);
+            contentPane.add(email_username);
 
-        JLabel lblPassword = new JLabel("Password");
-        lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblPassword.setBounds(58, 330, 99, 24);
-        contentPane.add(lblPassword);
+            JLabel lblPassword = new JLabel("Password");
+            lblPassword.setVisible(true);
+            lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
+            lblPassword.setBounds(58, 397, 99, 24);
+            contentPane.add(lblPassword);
 
-        passwordField = new JPasswordField();
-        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        passwordField.setBounds(260, 320, 228, 50);
-        contentPane.add(passwordField);
+            JPasswordField passwordField = new JPasswordField();
+            passwordField.setVisible(true);
+            passwordField.setFont(new Font("Tahoma", Font.PLAIN, 32));
+            passwordField.setBounds(214, 390, 228, 50);
+            contentPane.add(passwordField);
 
-        loginButton = new JButton("Login");
-        loginButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
-        loginButton.setBounds(170, 700, 200, 74);
-        contentPane.add(loginButton);
+            JButton btnNewButton = new JButton("Login");
+            btnNewButton.setVisible(true);
+            btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
+            btnNewButton.setBounds(140, 700, 259, 74);
+            contentPane.add(btnNewButton);
     }
 }
