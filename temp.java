@@ -1,28 +1,32 @@
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
 import java.util.concurrent.TimeUnit;
 
 
-public class StartScreen{
+public class temp{
         public static void main(String[] args) {
 
-            Login a = new Login();
-
             JFrame frame = new JFrame("TinkOn");
+
             frame.setIconImage(Toolkit.getDefaultToolkit().getImage("bank_icon.png"));
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(550, 870);
@@ -45,26 +49,10 @@ public class StartScreen{
             loginButton.setBounds(140, 350, 259, 74);
             contentPane.add(loginButton);
 
-            loginButton.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    Login log = new Login();
-                    log.login();
-                    frame.dispose();
-                }
-            });
-
             JButton registerButton = new JButton("Register");
             registerButton.setVisible(true);
             registerButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
             registerButton.setBounds(140, 434, 259, 74);
             contentPane.add(registerButton);
-
-            registerButton.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    Registration reg = new Registration();
-                    reg.register();
-                    frame.dispose();
-                }
-            });
     }
 }

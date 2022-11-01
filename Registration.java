@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Registration{
-        public static void main(String[] args) {
+        public  JFrame register() {
             JFrame frame = new JFrame("Registration");
             frame.setIconImage(Toolkit.getDefaultToolkit().getImage("bank_icon.png"));
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -115,5 +115,7 @@ public class Registration{
             btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
             btnNewButton.setBounds(140, 700, 259, 74);
             contentPane.add(btnNewButton);
+
+            return frame;
     }
 }

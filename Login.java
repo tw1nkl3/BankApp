@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Login{
-        public static void main(String[] args) {
+        public JFrame login(){
             JFrame frame = new JFrame("Login");
             frame.setIconImage(Toolkit.getDefaultToolkit().getImage("bank_icon.png"));
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,5 +67,7 @@ public class Login{
             btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
             btnNewButton.setBounds(140, 700, 259, 74);
             contentPane.add(btnNewButton);
+
+            return frame;
     }
 }

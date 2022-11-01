@@ -1,2 +1,5 @@
 91 между JLabel
 84 между JTextField
+
+логин и регистрация вызываются из StartScreen
+кнопки в Login и Registration перенаправляют в основное окно
