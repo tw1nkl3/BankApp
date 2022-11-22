@@ -1,27 +1,22 @@
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
-import java.util.concurrent.TimeUnit;
 
 
-public class StartScreen{
-        public static void main(String[] args) {
-
-            Login a = new Login();
-
+public class StartScreen extends logButtons{
+        public static void main(String[] args) throws InterruptedException {
             JFrame frame = new JFrame("TinkOn");
             frame.setIconImage(Toolkit.getDefaultToolkit().getImage("bank_icon.png"));
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,6 +33,21 @@ public class StartScreen{
             lblNewUserRegister.setFont(new Font("Times New Roman", Font.PLAIN, 42));
             lblNewUserRegister.setBounds(45, 52, 460, 50);
             contentPane.add(lblNewUserRegister);
+
+            JLabel lblMouseEvent = new JLabel(logM());
+            lblMouseEvent.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+            lblMouseEvent.setBounds(200, 20, 200, 50);
+            contentPane.add(lblMouseEvent);
+
+            String pattern = "MM/dd/yyyy HH:mm";
+            DateFormat df = new SimpleDateFormat(pattern);
+            Date today = Calendar.getInstance().getTime();        
+            String stringDate = df.format(today);
+
+            JLabel lblTime = new JLabel(stringDate);
+            lblTime.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+            lblTime.setBounds(10, 20, 200, 50);
+            contentPane.add(lblTime);
 
             JButton loginButton = new JButton("Login");
             loginButton.setVisible(true);
@@ -66,5 +76,17 @@ public class StartScreen{
                     frame.dispose();
                 }
             });
+            
+            /* Timer timer = new Timer(100,new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    int i;
+                    lblTime.setText(String.valueOf(i));
+                    if(i==100){
+                        timer.stop();
+                    }
+                    i++;
+                }
+            }); */
     }
 }

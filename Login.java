@@ -1,23 +1,19 @@
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-
-import java.util.concurrent.TimeUnit;
-
 
 public class Login{
         public JFrame login(){
@@ -35,8 +31,18 @@ public class Login{
 
             JLabel lblNewUserRegister = new JLabel("Welcome to TinkOn bank");
             lblNewUserRegister.setFont(new Font("Times New Roman", Font.PLAIN, 42));
-            lblNewUserRegister.setBounds(45, 52, 460, 50);
+            lblNewUserRegister.setBounds(45, 60, 460, 50);
             contentPane.add(lblNewUserRegister);
+            
+            String pattern = "MM/dd/yyyy HH:mm";
+            DateFormat df = new SimpleDateFormat(pattern);
+            Date today = Calendar.getInstance().getTime();        
+            String stringDate = df.format(today);
+
+            JLabel lblTime = new JLabel(stringDate);
+            lblTime.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+            lblTime.setBounds(10, 20, 200, 50);
+            contentPane.add(lblTime);
 
             JLabel lblEmailAddressUsername = new JLabel("<html>Email address<br/>or username</html>");
             lblEmailAddressUsername.setVisible(true);
@@ -62,12 +68,24 @@ public class Login{
             passwordField.setBounds(214, 390, 228, 50);
             contentPane.add(passwordField);
 
-            JButton btnNewButton = new JButton("Login");
-            btnNewButton.setVisible(true);
-            btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
-            btnNewButton.setBounds(140, 700, 259, 74);
-            contentPane.add(btnNewButton);
+            JButton loginButton = new JButton("Login");
+            loginButton.setVisible(true);
+            loginButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
+            loginButton.setBounds(140, 700, 259, 74);
+            contentPane.add(loginButton);
+
+            loginButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    HomeScreen hs1 = new HomeScreen();
+                    hs1.homeJFrame();
+                    frame.dispose();
+                }
+            });
 
             return frame;
+    }
+
+    public void getMouseIvents(){
+        
     }
 }

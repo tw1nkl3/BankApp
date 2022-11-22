@@ -1,22 +1,19 @@
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-
-import java.util.concurrent.TimeUnit;
 
 
 public class Registration{
@@ -110,12 +107,29 @@ public class Registration{
             passwordField.setBounds(214, 547, 228, 50);
             contentPane.add(passwordField);
 
-            JButton btnNewButton = new JButton("Register");
-            btnNewButton.setVisible(true);
-            btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
-            btnNewButton.setBounds(140, 700, 259, 74);
-            contentPane.add(btnNewButton);
+            JButton regButton = new JButton("Register");
+            regButton.setVisible(true);
+            regButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
+            regButton.setBounds(140, 700, 259, 74);
+            contentPane.add(regButton);
 
+            String pattern = "MM/dd/yyyy HH:mm";
+            DateFormat df = new SimpleDateFormat(pattern);
+            Date today = Calendar.getInstance().getTime();        
+            String stringDate = df.format(today);
+
+            JLabel lblTime = new JLabel(stringDate);
+            lblTime.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+            lblTime.setBounds(10, 20, 200, 50);
+            contentPane.add(lblTime);
+
+            regButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    HomeScreen hs = new HomeScreen();
+                    hs.homeJFrame();
+                    frame.dispose();
+                }
+            });
             return frame;
     }
 }

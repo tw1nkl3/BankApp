@@ -1,0 +1,20 @@
+{
+    "java.project.referencedLibraries": [
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\poi\\poi-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\poi\\poi-examples-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\poi\\poi-excelant-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\poi\\poi-javadoc-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\poi\\poi-ooxml-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\poi\\poi-ooxml-full-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\poi\\poi-ooxml-lite-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\poi\\poi-scratchpad-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\javaLibs\\poi\\poi-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\javaLibs\\poi\\poi-examples-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\javaLibs\\poi\\poi-excelant-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\javaLibs\\poi\\poi-javadoc-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\javaLibs\\poi\\poi-ooxml-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\javaLibs\\poi\\poi-ooxml-full-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\javaLibs\\poi\\poi-ooxml-lite-5.2.3.jar",
+        "c:\\Users\\asus\\OneDrive\\Рабочий стол\\javaLibs\\poi\\poi-scratchpad-5.2.3.jar"
+    ]
+}
