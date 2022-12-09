@@ -84,8 +84,4 @@ public class Login{
 
             return frame;
     }
-
-    public void getMouseIvents(){
-        
-    }
 }
